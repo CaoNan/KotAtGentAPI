@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="KotAtGentDataClasses">
+  <DataContextMoniker Name="/KotAtGentDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3370d0b9-57a7-47c3-a8e8-d5c57df41014" absoluteBounds="6.25, 1.5, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/KotAtGentDataClassesDataContext/KotAtGent_Kot" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c560c94-35e2-4933-8da0-b9bae06cbd11" absoluteBounds="6.265, 1.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a0c82b51-f6b3-4b1e-8018-879ac2e9c5c1" absoluteBounds="2.5, 1.125, 2, 1.0016910807291668">
+      <DataClassMoniker Name="/KotAtGentDataClassesDataContext/KotAtGent_Type" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd4c7208-cdc6-4f6e-9f0f-8440300f7baf" absoluteBounds="2.5149999999999997, 1.585, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 1.81334554036458); (6.25 : 1.81334554036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KotAtGentDataClassesDataContext/KotAtGent_Type/KotAtGent_Type_KotAtGent_Kot" />
+      <nodes>
+        <classShapeMoniker Id="a0c82b51-f6b3-4b1e-8018-879ac2e9c5c1" />
+        <classShapeMoniker Id="3370d0b9-57a7-47c3-a8e8-d5c57df41014" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8cccee37-e840-4df6-b08b-755117c23f56" absoluteBounds="2.625, 2.75, 2, 1.0016910807291668">
+      <DataClassMoniker Name="/KotAtGentDataClassesDataContext/KotAtGent_Zone" />
+      <nestedChildShapes>
+        <elementListCompartment Id="342bee7b-3ed7-4e3d-9196-88ff1c8d0195" absoluteBounds="2.64, 3.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 3.25084554036458); (6.25 : 3.25084554036458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KotAtGentDataClassesDataContext/KotAtGent_Zone/KotAtGent_Zone_KotAtGent_Kot" />
+      <nodes>
+        <classShapeMoniker Id="8cccee37-e840-4df6-b08b-755117c23f56" />
+        <classShapeMoniker Id="3370d0b9-57a7-47c3-a8e8-d5c57df41014" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

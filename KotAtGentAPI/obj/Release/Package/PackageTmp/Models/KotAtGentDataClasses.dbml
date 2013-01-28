@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="STUDENT_nan.cao@kahosl.be" Class="KotAtGentDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=PBAICTSQLFARM02.acad.kahosl.be;Initial Catalog=STUDENT_nan.cao@kahosl.be;Persist Security Info=True;User ID=STUDENT_SQLHigh_nan.cao@kahosl.be" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="STUDENT_nan_cao_kahosl_beConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.KotAtGent_Kots" Member="KotAtGent_Kots">
+    <Type Name="KotAtGent_Kot">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Zone" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Adres" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Eigennaar_naam" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Eigennaar_telefoon" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Eigennaar_email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Kamers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Min_prijs" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Max_prijs" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Lat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Long" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Beschrijving" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="KotAtGent_Type_KotAtGent_Kot" Member="KotAtGent_Type" ThisKey="Type" OtherKey="Type" Type="KotAtGent_Type" IsForeignKey="true" />
+      <Association Name="KotAtGent_Zone_KotAtGent_Kot" Member="KotAtGent_Zone" ThisKey="Zone" OtherKey="Zone" Type="KotAtGent_Zone" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KotAtGent_Type" Member="KotAtGent_Types">
+    <Type Name="KotAtGent_Type">
+      <Column Name="Type" Type="System.String" DbType="VarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="KotAtGent_Type_KotAtGent_Kot" Member="KotAtGent_Kots" ThisKey="Type" OtherKey="Type" Type="KotAtGent_Kot" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KotAtGent_Zone" Member="KotAtGent_Zones">
+    <Type Name="KotAtGent_Zone">
+      <Column Name="Zone" Type="System.String" DbType="VarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="KotAtGent_Zone_KotAtGent_Kot" Member="KotAtGent_Kots" ThisKey="Zone" OtherKey="Zone" Type="KotAtGent_Kot" />
+    </Type>
+  </Table>
+</Database>
